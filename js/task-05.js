@@ -5,7 +5,11 @@ const refs = {
 
 refs.inputEl.addEventListener("input", onInputElement);
 // refs.inputEl.addEventListener("input", onInputElement);
-
+console.log(refs.span.textContent);
 function onInputElement(event) {
-  refs.span.textContent = event.currentTarget.value;
+  if (event.currentTarget.value) {
+    refs.span.textContent = event.currentTarget.value;
+  } else {
+    refs.span.textContent = "Anonymous";
+  }
 }
