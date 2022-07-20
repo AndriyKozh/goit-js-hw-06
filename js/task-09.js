@@ -8,9 +8,9 @@ const colorName = document.querySelector(".color");
 
 const bodyFon = document.querySelector("body");
 
-colorBtn.addEventListener("click", changecColor);
+colorBtn.addEventListener("click", onChangecColor);
 
-function changecColor() {
+function onChangecColor() {
   const result = (bodyFon.style.backgroundColor = getRandomHexColor());
   colorName.innerHTML = result;
 }
