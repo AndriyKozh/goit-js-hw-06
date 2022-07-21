@@ -9,6 +9,10 @@ const ingredients = [
 
 const nameIngredientsAddEl = document.querySelector("#ingredients");
 
-const itemElements = ingredients.map((name) => `<li>${name}<li>`).join("");
-
-nameIngredientsAddEl.insertAdjacentHTML("beforeend", itemElements);
+const itemElements = ingredients.map((ingredient) => {
+  const newItem = document.createElement("li");
+  newItem.textContent = ingredient;
+  newItem.classList.add("item");
+  return newItem;
+});
+nameIngredientsAddEl.append(...itemElements);
