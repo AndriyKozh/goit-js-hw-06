@@ -20,6 +20,5 @@ const markup = images
     return `<li class="gsllety-item"><img class="gallery-img" src="${image.url}" alt="${image.alt}"/></li>`;
   })
   .join("");
-console.log(markup);
 
 galleriEl.insertAdjacentHTML("beforeend", markup);

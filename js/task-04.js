@@ -1,3 +1,4 @@
+let counterValue = 0;
 const decrementEl = document.querySelector(
   '#counter button[data-action="decrement"]'
 );
@@ -11,9 +12,7 @@ const spanEl = document.querySelector("#value");
 decrementEl.addEventListener("click", onDecrementBattom);
 incrementEl.addEventListener("click", onIncrementTop);
 
-let counterValue = 0;
-
-function onDecrementBattom(a) {
+function onDecrementBattom() {
   counterValue -= 1;
   spanEl.textContent = counterValue;
 }
@@ -22,4 +21,3 @@ function onIncrementTop() {
   counterValue += 1;
   spanEl.textContent = counterValue;
 }
-console.log(counterValue);

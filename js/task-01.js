@@ -1,36 +1,12 @@
-const itemEl = document.querySelectorAll("h2");
-console.log(`Number of categories: ${itemEl.length}`);
+const categoriesList = document.querySelector("#categories");
+const categoriesItem = categoriesList.children;
 
-console.log("");
-const refs = {
-  nameContentEl: document.querySelectorAll("li.item"),
-  itemElements: document.querySelectorAll(".item ul"),
-};
+console.log(`Number of categories: ${categoriesItem.length}`);
 
-const animalsEl = refs.nameContentEl;
-const animalEl = animalsEl[0].firstElementChild.textContent;
-console.log(`Category: ${animalEl}`);
+for (let child of categoriesItem) {
+  const categoryTitle = child.querySelector("h2");
+  console.log(`Category: ${categoryTitle.textContent}`);
 
-const numbAnimalsEL = refs.itemElements;
-const numbersAnimalsEL = numbAnimalsEL[0].children.length;
-console.log(`Elements: ${numbersAnimalsEL}`);
-
-console.log("");
-
-const productsEl = refs.nameContentEl;
-const productEl = productsEl[1].firstElementChild.textContent;
-console.log(`Category: ${productEl}`);
-
-const numbProductsEL = refs.itemElements;
-const numbersProductsEL = numbProductsEL[1].children.length;
-console.log(`Elements: ${numbersProductsEL}`);
-
-console.log("");
-
-const technologiesEl = refs.nameContentEl;
-const technologieEl = technologiesEl[2].firstElementChild.textContent;
-console.log(`Category: ${technologieEl}`);
-
-const numbTechnologiesEL = refs.itemElements;
-const numbersTechnologiesEL = numbTechnologiesEL[2].children.length;
-console.log(`Elements: ${numbersTechnologiesEL}`);
+  const categoryEl = child.querySelectorAll("ul > li");
+  console.log(`Elements: ${categoryEl.length}`);
+}
